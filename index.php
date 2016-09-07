@@ -5,6 +5,7 @@
     <title>Felipe Regino</title>
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
   </head>
   <body>
 
@@ -31,7 +32,7 @@
                 </p>
               </div>
             </div>
-            <p><a class="btn btn-lg btn-success" href="#" role="button">Contact</a></p>
+            <p><a class="btn btn-lg btn-success" href="#contact" role="button">Contact</a></p>
               <div class="col-md-12">
                 <a href="https://github.com/FelipeRegino">
                   <svg style="width:50px;height:50px" viewBox="0 0 24 24">
@@ -45,14 +46,51 @@
                 </a>
               </div>
           </div>
-          <footer class="footer">
-            <p>Developed by Felipe Regino, Salvador 2016.</p>
-          </footer>
         </div>
 
+        <section id="contact">
+          <div class="container">
+            <div class="jumbotron">
+              <h1>Contact</h1>
 
+              <div class="row">
+              <div class="col-sm-6 col-sm-offset-3">
+                  <div class="well" style="margin-top: 10%;">
+                  <form role="form" id="contactForm" data-toggle="validator" class="shake">
+                      <div class="row">
+                          <div class="form-group col-sm-6">
+                              <label for="name" class="h4">Name</label>
+                              <input type="text" class="form-control" id="name" placeholder="Enter name" required data-error="NEW ERROR MESSAGE">
+                              <div class="help-block with-errors"></div>
+                          </div>
+                          <div class="form-group col-sm-6">
+                              <label for="email" class="h4">Email</label>
+                              <input type="email" class="form-control" id="email" placeholder="Enter email" required>
+                              <div class="help-block with-errors"></div>
+                          </div>
+                      </div>
+                      <div class="form-group">
+                          <label for="message" class="h4 ">Message</label>
+                          <textarea id="message" class="form-control" rows="5" placeholder="Enter your message" required></textarea>
+                          <div class="help-block with-errors"></div>
+                      </div>
+                      <button type="submit" id="form-submit" class="btn btn-lg btn-success pull-right ">Submit</button>
+                      <div id="msgSubmit" class="h3 text-center hidden"></div>
+                      <div class="clearfix"></div>
+                  </form>
+                  </div>
+              </div>
+              </div>
+            </div>
+          </div>
+        </section>
 
-
+        <footer class="footer" style="text-align: center;">
+          <p>Developed by Felipe Regino, Salvador 2016.</p>
+        </footer>
+    <script  type="text/javascript" src="assets/js/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="assets/js/validator.min.js"></script>
+    <script type="text/javascript" src="assets/js/form-scripts.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
   </body>
 </html>
