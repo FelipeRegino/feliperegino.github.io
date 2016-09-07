@@ -56,22 +56,27 @@
               <div class="row">
               <div class="col-sm-6 col-sm-offset-3">
                   <div class="well" style="margin-top: 10%;">
-                  <form role="form" id="contactForm" data-toggle="validator" class="shake">
+                  <form role="form" id="contactForm" data-toggle="validator" class="shake" action="php/form-process.php" method="post">
                       <div class="row">
                           <div class="form-group col-sm-6">
                               <label for="name" class="h4">Name</label>
-                              <input type="text" class="form-control" id="name" placeholder="Enter name" required data-error="NEW ERROR MESSAGE">
+                              <input name="name" type="text" class="form-control" id="name" placeholder="Enter name" required>
                               <div class="help-block with-errors"></div>
                           </div>
                           <div class="form-group col-sm-6">
                               <label for="email" class="h4">Email</label>
-                              <input type="email" class="form-control" id="email" placeholder="Enter email" required>
+                              <input name="email" type="email" class="form-control" id="email" placeholder="Enter email" required>
                               <div class="help-block with-errors"></div>
                           </div>
                       </div>
+                      <!-- <div class="form-group col-sm-12">
+                        <label for="topic" class="h4">Topic</label>
+                        <input name="topic" type="text" class="form-control" id="topic" placeholder="Enter the topic" required>
+                        <div class="help-block with-errors"></div>
+                      </div> -->
                       <div class="form-group">
                           <label for="message" class="h4 ">Message</label>
-                          <textarea id="message" class="form-control" rows="5" placeholder="Enter your message" required></textarea>
+                          <textarea name="message" id="message" class="form-control" rows="5" placeholder="Enter your message" required></textarea>
                           <div class="help-block with-errors"></div>
                       </div>
                       <button type="submit" id="form-submit" class="btn btn-lg btn-success pull-right ">Submit</button>
