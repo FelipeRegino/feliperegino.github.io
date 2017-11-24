@@ -1,1 +1,1 @@
-Sitemap: http://feliperegino.github.io//sitemap.xml
+Sitemap: https://feliperegino.github.io//sitemap.xml
