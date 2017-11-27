@@ -27,7 +27,8 @@ layout: compress
                     <ul>
                         <li>
                             <a href="{{ site.url }}{{ post.url }}">
-                              <h2 class="zoombtn">{{ post.title }}</h2>
+                              <h2 class="zoombtn" style="margin-bottom: 0px;">{{ post.title }}</h2>
+                              <small>{{ post.date | date: '%d/%m/%Y' }} - {{post.author}}</small>
                               <p>{{ post.excerpt }}</p>
                             </a>
                         </li>

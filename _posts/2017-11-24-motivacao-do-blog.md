@@ -1,7 +1,8 @@
 ---
 layout: post
 title: "Motivação para este blog"
-date: 2017-11-24
+date: 24/11/2017
+author: Felipe Regino
 excerpt: "Um pequeno texto sobre o objetivo desse blog."
 tags: [first, motivation, blog, problems]
 feature: https://i.imgur.com/jGoCxRz.jpg
