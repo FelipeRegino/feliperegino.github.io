@@ -30,11 +30,11 @@ A melhor solução foi trocar de lib. Depois de um tempo pesquisando encontrei a
 Enfim, jQuery-Mask-Plugin vai aplicando mascara conforme o usuário digita e com isso nosso problema está resolvido.
 
 Sua utilização é bem simples, caso esteja utilizando um projeto com o composer, que era o meu caso, basta rodar:
-{% raw %}
+``` bash
 $ composer require igorescobar/jquery-mask-plugin
-{% endraw %}
+```
 
-Você pode utilizar outros gerenciadores de pacotes como o Bower, NPM, RubyGems, ou simplesmente baixar a pasta do projeto e carregar o {% raw %}jquery.mask.js{% endraw %} no seu arquivo.
+Você pode utilizar outros gerenciadores de pacotes como o Bower, NPM, RubyGems, ou simplesmente baixar a pasta do projeto e carregar o ```jquery.mask.js``` no seu arquivo.
 
 Com seu jQuery-Mask-Plugin carregado basta você utilizar um seletor e aplicar a mascara, dessa forma:
 

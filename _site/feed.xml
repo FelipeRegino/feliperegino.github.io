@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="https://feliperegino.github.io//feed.xml" rel="self" type="application/atom+xml" /><link href="https://feliperegino.github.io//" rel="alternate" type="text/html" /><updated>2017-12-01T03:44:51-02:00</updated><id>https://feliperegino.github.io//</id><title type="html">Felipe Regino</title><subtitle>Web Full Stack Developer - Salvador, Brasil.</subtitle><entry><title type="html">Resolvendo o problema do jQuery InputMask no Mobile</title><link href="https://feliperegino.github.io//resolvendo-problema-do-jQuery-InputMask-no-Mobile/" rel="alternate" type="text/html" title="Resolvendo o problema do jQuery InputMask no Mobile" /><published>2017-12-01T00:00:00-02:00</published><updated>2017-12-01T00:00:00-02:00</updated><id>https://feliperegino.github.io//resolvendo-problema-do-jQuery-InputMask-no-Mobile</id><content type="html" xml:base="https://feliperegino.github.io//resolvendo-problema-do-jQuery-InputMask-no-Mobile/">&lt;p&gt;Olá, como vão?&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="https://feliperegino.github.io//feed.xml" rel="self" type="application/atom+xml" /><link href="https://feliperegino.github.io//" rel="alternate" type="text/html" /><updated>2017-12-01T03:51:42-02:00</updated><id>https://feliperegino.github.io//</id><title type="html">Felipe Regino</title><subtitle>Web Full Stack Developer - Salvador, Brasil.</subtitle><entry><title type="html">Resolvendo o problema do jQuery InputMask no Mobile</title><link href="https://feliperegino.github.io//resolvendo-problema-do-jQuery-InputMask-no-Mobile/" rel="alternate" type="text/html" title="Resolvendo o problema do jQuery InputMask no Mobile" /><published>2017-12-01T00:00:00-02:00</published><updated>2017-12-01T00:00:00-02:00</updated><id>https://feliperegino.github.io//resolvendo-problema-do-jQuery-InputMask-no-Mobile</id><content type="html" xml:base="https://feliperegino.github.io//resolvendo-problema-do-jQuery-InputMask-no-Mobile/">&lt;p&gt;Olá, como vão?&lt;/p&gt;
 
 &lt;p&gt;Recentemente me deparei com um problema pequeno, já havia sofrido com ele em outros sites, mas como estava apenas no papel de usuário não sabia quem era o real causador.&lt;/p&gt;
 
@@ -23,10 +23,10 @@
 &lt;p&gt;Enfim, jQuery-Mask-Plugin vai aplicando mascara conforme o usuário digita e com isso nosso problema está resolvido.&lt;/p&gt;
 
 &lt;p&gt;Sua utilização é bem simples, caso esteja utilizando um projeto com o composer, que era o meu caso, basta rodar:&lt;/p&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;composer require igorescobar/jquery-mask-plugin
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;$ composer require igorescobar/jquery-mask-plugin&lt;/p&gt;
-
-&lt;p&gt;Você pode utilizar outros gerenciadores de pacotes como o Bower, NPM, RubyGems, ou simplesmente baixar a pasta do projeto e carregar o jquery.mask.js no seu arquivo.&lt;/p&gt;
+&lt;p&gt;Você pode utilizar outros gerenciadores de pacotes como o Bower, NPM, RubyGems, ou simplesmente baixar a pasta do projeto e carregar o &lt;code class=&quot;highlighter-rouge&quot;&gt;jquery.mask.js&lt;/code&gt; no seu arquivo.&lt;/p&gt;
 
 &lt;p&gt;Com seu jQuery-Mask-Plugin carregado basta você utilizar um seletor e aplicar a mascara, dessa forma:&lt;/p&gt;
 
