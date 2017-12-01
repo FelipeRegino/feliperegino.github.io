@@ -1,4 +1,46 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="https://feliperegino.github.io//feed.xml" rel="self" type="application/atom+xml" /><link href="https://feliperegino.github.io//" rel="alternate" type="text/html" /><updated>2017-11-27T22:41:32-02:00</updated><id>https://feliperegino.github.io//</id><title type="html">Felipe Regino</title><subtitle>Web Full Stack Developer - Salvador, Brasil.</subtitle><entry><title type="html">Motivação para este blog</title><link href="https://feliperegino.github.io//motivacao-do-blog/" rel="alternate" type="text/html" title="Motivação para este blog" /><published>2017-11-24T00:00:00-02:00</published><updated>2017-11-24T00:00:00-02:00</updated><id>https://feliperegino.github.io//motivacao-do-blog</id><content type="html" xml:base="https://feliperegino.github.io//motivacao-do-blog/">&lt;p&gt;Olá, antes de mais nada vou me apresentar. Meu nome é Felipe Regino, nasci no ano de 1997 na cidade de Salvador - Bahia e, no momento que esse post está sendo escrito, estudo computação na Universidade Federal da Bahia - UFBA.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="https://feliperegino.github.io//feed.xml" rel="self" type="application/atom+xml" /><link href="https://feliperegino.github.io//" rel="alternate" type="text/html" /><updated>2017-12-01T03:44:51-02:00</updated><id>https://feliperegino.github.io//</id><title type="html">Felipe Regino</title><subtitle>Web Full Stack Developer - Salvador, Brasil.</subtitle><entry><title type="html">Resolvendo o problema do jQuery InputMask no Mobile</title><link href="https://feliperegino.github.io//resolvendo-problema-do-jQuery-InputMask-no-Mobile/" rel="alternate" type="text/html" title="Resolvendo o problema do jQuery InputMask no Mobile" /><published>2017-12-01T00:00:00-02:00</published><updated>2017-12-01T00:00:00-02:00</updated><id>https://feliperegino.github.io//resolvendo-problema-do-jQuery-InputMask-no-Mobile</id><content type="html" xml:base="https://feliperegino.github.io//resolvendo-problema-do-jQuery-InputMask-no-Mobile/">&lt;p&gt;Olá, como vão?&lt;/p&gt;
+
+&lt;p&gt;Recentemente me deparei com um problema pequeno, já havia sofrido com ele em outros sites, mas como estava apenas no papel de usuário não sabia quem era o real causador.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Mas que problema é esse maluco?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Calma vou dizer. Vocês já tentaram escrever no campo de CPF, Data de nascimento, telefone, em um formulário e ele ficou todo bagunçado? Tipo isso aqui:&lt;/p&gt;
+
+&lt;figure&gt;
+	&lt;img src=&quot;https://i.imgur.com/3vu59jS.gif&quot; /&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Então, me encontrei novamente com esse forasteiro problemático, dessa vez como desenvolvedor, e acabei descobrindo que isso é causado pela lib InputMask jQuery, que estava sendo usado no sistema onde eu estava trabalhando. O que acontece é que o inputMask mexe com uma propriedade relacionada ao ponteiro, que é a barrinha que fica piscando indicando onde você vai escrever, e essa propriedade funciona de forma um pouco diferente no mobile e acaba não funcionando da melhor forma.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Sim e como que resolve esse negócio?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;A melhor solução foi trocar de lib. Depois de um tempo pesquisando encontrei a lib &lt;a href=&quot;https://github.com/igorescobar/jQuery-Mask-Plugin&quot;&gt;jQuery-Mask-Plugin&lt;/a&gt;, que é um projeto open source desenvolvido pelo &lt;a href=&quot;https://twitter.com/igorescobar&quot;&gt;Igor Escobar&lt;/a&gt; um brasileiro, que pasmem, tem uma historia hilária com o Donald Trump (sim, O PRESIDENTE DOS EUA), você pode entender um pouco dessa historia lendo &lt;a href=&quot;https://blog.chibicode.com/you-can-submit-a-pull-request-to-inject-arbitrary-js-code-into-donald-trumps-site-here-s-how-782aa6a17a56&quot;&gt;esse artigo do medium&lt;/a&gt; ou o &lt;a href=&quot;http://www.igorescobar.com/blog/2016/08/21/ive-the-chance-to-troll-donald-trump-but-i-didnt/&quot;&gt;próprio post do Igor sobre isso.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Enfim, jQuery-Mask-Plugin vai aplicando mascara conforme o usuário digita e com isso nosso problema está resolvido.&lt;/p&gt;
+
+&lt;p&gt;Sua utilização é bem simples, caso esteja utilizando um projeto com o composer, que era o meu caso, basta rodar:&lt;/p&gt;
+
+&lt;p&gt;$ composer require igorescobar/jquery-mask-plugin&lt;/p&gt;
+
+&lt;p&gt;Você pode utilizar outros gerenciadores de pacotes como o Bower, NPM, RubyGems, ou simplesmente baixar a pasta do projeto e carregar o jquery.mask.js no seu arquivo.&lt;/p&gt;
+
+&lt;p&gt;Com seu jQuery-Mask-Plugin carregado basta você utilizar um seletor e aplicar a mascara, dessa forma:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;#nascimento&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;mask&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;00/00/0000&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Você pode também gerar um placeholder para seu campo&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;#nascimento&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;mask&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;00/00/0000&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;placeholder&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;__/__/____&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Entre outras coisas. Tudo isso está descrito na &lt;a href=&quot;https://igorescobar.github.io/jQuery-Mask-Plugin/docs.html&quot;&gt;DOCUMENTAÇÃO&lt;/a&gt; do projeto. Leiam e utilizem o jQuery-Mask-Plugin.&lt;/p&gt;
+
+&lt;p&gt;Muito obrigado por acessarem meu blog.&lt;/p&gt;
+
+&lt;p&gt;Grande Abraço!😄&lt;/p&gt;</content><author><name>Felipe Regino</name></author><category term="jQuery" /><category term="mobile" /><category term="javascript" /><category term="opensource" /><summary type="html">Qual solução encontrei para bug gerado pelo inputMask no mobile</summary></entry><entry><title type="html">Motivação para este blog</title><link href="https://feliperegino.github.io//motivacao-do-blog/" rel="alternate" type="text/html" title="Motivação para este blog" /><published>2017-11-24T00:00:00-02:00</published><updated>2017-11-24T00:00:00-02:00</updated><id>https://feliperegino.github.io//motivacao-do-blog</id><content type="html" xml:base="https://feliperegino.github.io//motivacao-do-blog/">&lt;p&gt;Olá, antes de mais nada vou me apresentar. Meu nome é Felipe Regino, nasci no ano de 1997 na cidade de Salvador - Bahia e, no momento que esse post está sendo escrito, estudo computação na Universidade Federal da Bahia - UFBA.&lt;/p&gt;
 
 &lt;p&gt;Já participei de uma empresa júnior e, apesar da pouca idade, já passei por algumas empresas de mercado, trabalhando com desenvolvimento web e foi nessa jornada que resolvi escrever esse blog.&lt;/p&gt;
 
