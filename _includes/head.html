@@ -11,6 +11,8 @@
     <meta charset="UTF-8">
     <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
     <meta http-equiv=X-UA-Compatible content="IE=edge,chrome=1">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#333333"/>
     <title>{% if page.title %}{{ page.title }} &#8211; {% endif %}{{ site.title }}</title>
     <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
     {% if page.tags %}<meta name="keywords" content="{{ page.tags | join: ', ' }}">{% endif %}
@@ -62,5 +64,3 @@
     {% unless feature contains 'http://' or feature contains 'https://' %}{% capture feature %}{{ site.url }}/{{ feature }}{% endcapture %}{% endunless %}
     <style type="text/css">.feature {background-image:url({{ feature }});}</style>
     {% endif %}
-    <link rel="manifest" href="manifest.json">
-    <meta name="theme-color" content="#333333"/>

@@ -1,7 +1,7 @@
                         importScripts("/assets/js/workbox-v3.6.3/workbox-sw.js");
             workbox.setConfig({modulePathPrefix: "/assets/js/workbox-v3.6.3"});
 
-            self.__precacheManifest = [{"url":"/index.html","revision":"68d82445da2c325db87c537c3fc4efdb"},{"url":"/resolvendo-problema-do-jQuery-InputMask-no-Mobile/","revision":"6976d4a75afea85dbe8e65264ede8340"},{"url":"/motivacao-do-blog/","revision":"c4cec7c5a331fb69e6f780c96dcd90d8"}];
+            self.__precacheManifest = [{"url":"/index.html","revision":"5458c0d047260e002ef3be1647c8bc33"},{"url":"/resolvendo-problema-do-jQuery-InputMask-no-Mobile/","revision":"6976d4a75afea85dbe8e65264ede8340"},{"url":"/motivacao-do-blog/","revision":"c4cec7c5a331fb69e6f780c96dcd90d8"}];
             // set names for both precache & runtime cache
 workbox.core.setCacheNameDetails({
     prefix: 'my-blog',
