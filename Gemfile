@@ -22,6 +22,7 @@ group :jekyll_plugins do
   gem "jekyll-sitemap"
   gem "jekyll-gist"
   gem 'jekyll-mentions'
+  gem 'jekyll-pwa-plugin'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

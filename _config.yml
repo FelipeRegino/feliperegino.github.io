@@ -5,7 +5,7 @@ description:        'Web Full Stack Developer - Salvador, Brasil.'
 reading_time:       true
 words_per_minute:   200
 logo:               '/assets/img/logo.jpg'
-background:         'assets/img/placeholder-big.jpg'
+background:         ''
 tiled_bg:           false   # Set this true if you want to tile your background image, otherwise it will be covered
 locale:             pt_BR
 url:                https://feliperegino.github.io
@@ -64,9 +64,23 @@ plugins:
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-gist
+  - jekyll-pwa-plugin
 
 jekyll-mentions:
     base_url: https://github.com
 
 # Exclude list
 exclude: [README.md, Gemfile, Gemfile.lock, node_modules, gulpfile.js, package.json, _site, src, vendor, CNAME, LICENSE, Rakefile]
+
+pwa:
+  sw_src_filepath: service-worker.js # Optional
+  sw_dest_filename: service-worker.js # Optional
+  dest_js_directory: assets/js # Required
+  precache_recent_posts_num: 5 # Optional
+  precache_glob_directory: / # Optional
+  precache_glob_patterns: # Optional
+    - "{js,css,fonts}/**/*.{js,css,eot,svg,ttf,woff}"
+    - index.html
+  precache_glob_ignores: # Optional
+    - sw-register.js
+    - "fonts/**/*"
