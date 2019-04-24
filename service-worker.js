@@ -25,6 +25,7 @@ const CACHE_STATIC = [
     '/posts/',
     '/resolvendo-problema-do-jQuery-InputMask-no-Mobile/',
     '/motivacao-do-blog/',
+    '/como-transformar-um-site-no-github-pages-feito-com-jekyll-em-uma-pwa/',
  ];
 
 self.addEventListener('install',function(e){

@@ -1,0 +1,142 @@
+<!DOCTYPE html> <!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]--> <!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8"><![endif]--> <!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9"><![endif]--> <!--[if gt IE 8]><!--> <html class="no-js"><!--<![endif]--> <head> <!-- Global site tag (gtag.js) - Google Analytics --> <script async src="https://www.googletagmanager.com/gtag/js?id=UA-85039433-1"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'UA-85039433-1'); </script> <meta charset="UTF-8"> <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"> <meta http-equiv=X-UA-Compatible content="IE=edge,chrome=1"> <link rel="manifest" href="/manifest.json"> <meta name="theme-color" content="#333333"/> <title>Como transformar um site no github pages feito com jekyll em uma pwa &#8211; Felipe Regino</title> <meta name="description" content="Full Stack Developer - Salvador, Brasil."> <meta name="keywords" content="PWA, mobile, javascript, github, github-pages, jekyll, google, web, cache"> <!-- Twitter Cards --> <meta name="twitter:card" content="summary_large_image"> <meta name="twitter:image" content="https://i.imgur.com/PEGiWkR.jpg"> <meta name="twitter:title" content="Como transformar um site no github pages feito com jekyll em uma pwa"> <meta name="twitter:description" content="O que fiz para transformar esse site em uma pwa"> <meta name="twitter:site" content="@FelipeRegino"> <meta name="twitter:creator" content="@FelipeRegino"> <!-- Open Graph --> <meta property="og:locale" content="pt_BR"> <meta property="og:type" content="article"> <meta property="og:title" content="Como transformar um site no github pages feito com jekyll em uma pwa"> <meta property="og:description" content="O que fiz para transformar esse site em uma pwa"> <meta property="og:url" content="http://localhost:4000/como-transformar-um-site-no-github-pages-feito-com-jekyll-em-uma-pwa/"> <meta property="og:site_name" content="Felipe Regino"> <meta property="og:image" content="http://localhost:4000//assets/img/logo.jpg"> <link rel="canonical" href="http://localhost:4000/como-transformar-um-site-no-github-pages-feito-com-jekyll-em-uma-pwa/"> <link href="http://localhost:4000/feed.xml" type="application/atom+xml" rel="alternate" title="Felipe Regino Feed"> <!-- Handheld --> <meta name="HandheldFriendly" content="True"> <meta name="MobileOptimized" content="320"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- CSS --> <link rel="stylesheet" href="http://localhost:4000/assets/css/main.css"> <!-- JS --> <script src="http://localhost:4000/assets/js/modernizr-3.3.1.custom.min.js"></script> <!-- Favicons --> <link rel="shortcut icon" type="image/png" href="http://localhost:4000/favicon.png" /> <link rel="shortcut icon" href="http://localhost:4000/favicon.ico" /> <!-- Background Image --> <style type="text/css">body {background-image:url(http://localhost:4000/); background-repeat: no-repeat; background-size: cover; }</style> <!-- Post Feature Image --> <style type="text/css">.feature {background-image:url(https://i.imgur.com/PEGiWkR.jpg);}</style> <script type="text/javascript"> if ("serviceWorker" in navigator) { navigator.serviceWorker.register("/service-worker.js").then(function(registration) { console.log("Service Worker registration successful with scope: ", registration.scope); }).catch(function(err) { console.log("Service Worker registration failed: ", err); }); } </script> </head> <body> <nav id="dl-menu" class="dl-menuwrapper" role="navigation"> <button class="dl-trigger">Open Menu</button> <ul class="dl-menu"> <li><a href="http://localhost:4000/">Home</a></li> <li> <a href="#">About</a> <ul class="dl-submenu"> <li> <img src="http://localhost:4000//assets/img/logo.jpg" alt="Felipe Regino photo" class="author-photo"> <h4>Felipe Regino</h4> <p>Full Stack Developer - Salvador, Brasil.</p> </li> <li><a href="http://localhost:4000/about/"><span class="btn btn-inverse">Learn More</span></a></li> <li> <a href="mailto:liperegino@gmail.com" target="_blank" rel="noopener noreferrer"><i class="fa fa-fw fa-envelope-square"></i> Email</a> </li> <li> <a href="http://twitter.com/FelipeRegino" target="_blank" rel="noopener noreferrer"><i class="fa fa-fw fa-twitter-square"></i> Twitter</a> </li> <li> <a href="http://linkedin.com/in/FelipeRegino" target="_blank" rel="noopener noreferrer"><i class="fa fa-fw fa-linkedin-square"></i> LinkedIn</a> </li> <li> <a href="http://github.com/FelipeRegino" target="_blank" rel="noopener noreferrer"><i class="fa fa-fw fa-github"></i> Github</a> </li> </ul><!-- /.dl-submenu --> </li> <li> <a href="#">Blog</a> <ul class="dl-submenu"> <li><a href="http://localhost:4000/posts/">Posts</a></li> <li><a href="http://localhost:4000/tags/">Tags</a></li> </ul> </li> </ul><!-- /.dl-menu --> </nav><!-- /.dl-menuwrapper --> <!-- Header --> <header class="header" role="banner"> <div class="wrapper animated fadeIn"> <div class="content"> <div class="post-title feature " style="background-size:cover;"> <a href="http://localhost:4000"> <img src="/assets/img/logo.jpg" class="img-circle zoombtn"> </a> <h3 class="title"> <a class="zoombtn" href="http://localhost:4000"> <p style="font-size:1.2rem;font-weight:300;text-shadow: 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;">Felipe Regino</p> </a> </h3> <h1>Como transformar um site no github pages feito com jekyll em uma pwa</h1> <h4>24 Apr 2019</h4> <p class="reading-time"> <i class="fa fa-clock-o"></i> Reading time ~3 minutes </p><!-- /.entry-reading-time --> <a class="btn zoombtn" href="http://localhost:4000/posts/"> <i class="fa fa-chevron-left"></i> Back </a> </div> <p>Olá você, tudo em cima?</p> <p>Nesse post, irei comentar o processo que fiz, para transformar esse site no qual você está agora em uma <a href="https://developers.google.com/web/progressive-web-apps/">PWA</a>.</p> <p>Antes de mais nada, gostaria de pedir desculpas por não colocar o link dos lugares onde pesquisei pois acabei perdendo meu histórico :(</p> <p>Sem mais delongas vamos direto ao ponto agora. Primeiramente indico fortemente que instalem uma extensão para chrome chamada <a href="https://developers.google.com/web/tools/lighthouse/">Lighthouse</a>, ela vai nos ajudar a ver se estamos fazendo tudo direitinho, retornando para a gente uma tela com dados como esta:</p> <figure> <img src="https://i.imgur.com/osap8XI.png" /> </figure> <p>Como podem ver, preciso melhor a acessibilidade do meu site.</p> <h2 id="manifestjson">Manifest.json</h2> <p>A partir dai, precisamos criar um <code class="highlighter-rouge">manifest.json</code> na pasta raiz do seu projeto, que vai ficar mais ou menos como isso aqui:</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">{</span>
+  <span class="s2">"name"</span>: <span class="s2">"Felipe Regino"</span>,
+  <span class="s2">"short_name"</span>: <span class="s2">"Felipe Regino"</span>,
+  <span class="s2">"theme_color"</span>: <span class="s2">"#333333"</span>,
+  <span class="s2">"background_color"</span>: <span class="s2">"#333333"</span>,
+  <span class="s2">"display"</span>: <span class="s2">"standalone"</span>,
+  <span class="s2">"Scope"</span>: <span class="s2">"/"</span>,
+  <span class="s2">"start_url"</span>: <span class="s2">"/"</span>,
+  <span class="s2">"icons"</span>: <span class="o">[</span>
+    <span class="o">{</span>
+      <span class="s2">"src"</span>: <span class="s2">"https://feliperegino.github.io/assets/img/icons/icon-72x72.png"</span>,
+      <span class="s2">"sizes"</span>: <span class="s2">"72x72"</span>,
+      <span class="s2">"type"</span>: <span class="s2">"image/png"</span>
+    <span class="o">}</span>,
+    <span class="o">{</span>
+      <span class="s2">"src"</span>: <span class="s2">"https://feliperegino.github.io/assets/img/icons/icon-96x96.png"</span>,
+      <span class="s2">"sizes"</span>: <span class="s2">"96x96"</span>,
+      <span class="s2">"type"</span>: <span class="s2">"image/png"</span>
+    <span class="o">}</span>,
+    <span class="o">{</span>
+      <span class="s2">"src"</span>: <span class="s2">"https://feliperegino.github.io/assets/img/icons/icon-128x128.png"</span>,
+      <span class="s2">"sizes"</span>: <span class="s2">"128x128"</span>,
+      <span class="s2">"type"</span>: <span class="s2">"image/png"</span>
+    <span class="o">}</span>,
+    <span class="o">{</span>
+      <span class="s2">"src"</span>: <span class="s2">"https://feliperegino.github.io/assets/img/icons/icon-144x144.png"</span>,
+      <span class="s2">"sizes"</span>: <span class="s2">"144x144"</span>,
+      <span class="s2">"type"</span>: <span class="s2">"image/png"</span>
+    <span class="o">}</span>,
+    <span class="o">{</span>
+      <span class="s2">"src"</span>: <span class="s2">"https://feliperegino.github.io/assets/img/icons/icon-152x152.png"</span>,
+      <span class="s2">"sizes"</span>: <span class="s2">"152x152"</span>,
+      <span class="s2">"type"</span>: <span class="s2">"image/png"</span>
+    <span class="o">}</span>,
+    <span class="o">{</span>
+      <span class="s2">"src"</span>: <span class="s2">"https://feliperegino.github.io/assets/img/icons/icon-192x192.png"</span>,
+      <span class="s2">"sizes"</span>: <span class="s2">"192x192"</span>,
+      <span class="s2">"type"</span>: <span class="s2">"image/png"</span>
+    <span class="o">}</span>,
+    <span class="o">{</span>
+      <span class="s2">"src"</span>: <span class="s2">"https://feliperegino.github.io/assets/img/icons/icon-384x384.png"</span>,
+      <span class="s2">"sizes"</span>: <span class="s2">"384x384"</span>,
+      <span class="s2">"type"</span>: <span class="s2">"image/png"</span>
+    <span class="o">}</span>,
+    <span class="o">{</span>
+      <span class="s2">"src"</span>: <span class="s2">"https://feliperegino.github.io/assets/img/icons/icon-512x512.png"</span>,
+      <span class="s2">"sizes"</span>: <span class="s2">"512x512"</span>,
+      <span class="s2">"type"</span>: <span class="s2">"image/png"</span>
+    <span class="o">}</span>
+  <span class="o">]</span>,
+  <span class="s2">"splash_pages"</span>: null
+<span class="o">}</span>
+</code></pre></div></div> <p>Para facilitar, utlizei o site <a href="https://app-manifest.firebaseapp.com/">Web App Manifest Generator</a> que já gera o <code class="highlighter-rouge">manifest.json</code> e todos os icones nos tamanhos corretos para você, só é preciso atualizar no <code class="highlighter-rouge">manifest.json</code> para os caminhos corretos onde você colocou seus icones.</p> <p>Com o <code class="highlighter-rouge">manifest.json</code> e os icones prontos, você precisa declarar no &lt;head&gt; do seu site. Adicione a seguinte tag dentro do seu &lt;head&gt;:</p> <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"manifest"</span> <span class="na">href=</span><span class="s">"/manifest.json"</span><span class="nt">&gt;</span>
+</code></pre></div></div> <h2 id="service-worker">Service Worker</h2> <p>Precisamos agora criar um service worker para nos ajudar com o cache!</p> <p>Crie um arquivo na raiz do seu projeto como o nome <code class="highlighter-rouge">serice-worker.js</code>, cole esse código e faça as alterações necessarias para as especificidades do seu site.</p> <figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">const</span> <span class="nx">VERSION</span> <span class="o">=</span> <span class="s2">"1.0.0"</span><span class="p">;</span>
+
+<span class="kd">const</span> <span class="nx">APP_CACHE_NAME</span> <span class="o">=</span> <span class="s1">'felipe-regino-app'</span><span class="p">;</span>
+<span class="kd">const</span> <span class="nx">STATIC_CACHE_NAME</span> <span class="o">=</span> <span class="s1">'felipe-regino-static'</span><span class="p">;</span>
+
+<span class="c1">//rotas dos arquivos estáticos</span>
+<span class="kd">const</span> <span class="nx">CACHE_STATIC</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s1">'/assets/css/main.css'</span><span class="p">,</span>
+    <span class="s1">'/assets/img/icons/icon-72x72.png'</span><span class="p">,</span>
+    <span class="s1">'/assets/img/icons/icon-96x96.png'</span><span class="p">,</span>
+    <span class="s1">'/assets/img/icons/icon-128x128.png'</span><span class="p">,</span>
+    <span class="s1">'/assets/img/icons/icon-144x144.png'</span><span class="p">,</span>
+    <span class="s1">'/assets/img/icons/icon-152x152.png'</span><span class="p">,</span>
+    <span class="s1">'/assets/img/icons/icon-192x192.png'</span><span class="p">,</span>
+    <span class="s1">'/assets/img/icons/icon-384x384.png'</span><span class="p">,</span>
+    <span class="s1">'/assets/img/icons/icon-512x512.png'</span><span class="p">,</span>
+    <span class="s1">'/assets/img/logo.jpg'</span><span class="p">,</span>
+ <span class="p">];</span>
+
+<span class="c1">//rotas das paginas do site</span>
+ <span class="kd">const</span> <span class="nx">CACHE_APP</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s1">'/'</span><span class="p">,</span>
+    <span class="s1">'/404'</span><span class="p">,</span>
+    <span class="s1">'/about/'</span><span class="p">,</span>
+    <span class="s1">'/tags/'</span><span class="p">,</span>
+    <span class="s1">'/posts/'</span><span class="p">,</span>
+    <span class="s1">'/resolvendo-problema-do-jQuery-InputMask-no-Mobile/'</span><span class="p">,</span>
+    <span class="s1">'/motivacao-do-blog/'</span><span class="p">,</span>
+ <span class="p">];</span>
+
+<span class="nb">self</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">'install'</span><span class="p">,</span><span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">){</span>
+    <span class="nx">e</span><span class="p">.</span><span class="nx">waitUntil</span><span class="p">(</span>
+        <span class="nb">Promise</span><span class="p">.</span><span class="nx">all</span><span class="p">([</span>
+            <span class="nx">caches</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="nx">STATIC_CACHE_NAME</span><span class="p">),</span>
+            <span class="nx">caches</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="nx">APP_CACHE_NAME</span><span class="p">),</span>
+            <span class="nb">self</span><span class="p">.</span><span class="nx">skipWaiting</span><span class="p">()</span>
+          <span class="p">]).</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">storage</span><span class="p">){</span>
+            <span class="kd">var</span> <span class="nx">static_cache</span> <span class="o">=</span> <span class="nx">storage</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
+            <span class="kd">var</span> <span class="nx">app_cache</span> <span class="o">=</span> <span class="nx">storage</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span>
+            <span class="k">return</span> <span class="nb">Promise</span><span class="p">.</span><span class="nx">all</span><span class="p">([</span>
+              <span class="nx">static_cache</span><span class="p">.</span><span class="nx">addAll</span><span class="p">(</span><span class="nx">CACHE_STATIC</span><span class="p">),</span>
+              <span class="nx">app_cache</span><span class="p">.</span><span class="nx">addAll</span><span class="p">(</span><span class="nx">CACHE_APP</span><span class="p">)]);</span>
+        <span class="p">})</span>
+    <span class="p">);</span>
+<span class="p">});</span>
+
+<span class="nb">self</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">'activate'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">e</span><span class="p">.</span><span class="nx">waitUntil</span><span class="p">(</span>
+        <span class="nb">Promise</span><span class="p">.</span><span class="nx">all</span><span class="p">([</span>
+            <span class="nb">self</span><span class="p">.</span><span class="nx">clients</span><span class="p">.</span><span class="nx">claim</span><span class="p">(),</span>
+            <span class="nx">caches</span><span class="p">.</span><span class="nx">keys</span><span class="p">().</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">cacheNames</span><span class="p">)</span> <span class="p">{</span>
+                <span class="k">return</span> <span class="nb">Promise</span><span class="p">.</span><span class="nx">all</span><span class="p">(</span>
+                    <span class="nx">cacheNames</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">cacheName</span><span class="p">)</span> <span class="p">{</span>
+                        <span class="k">if</span> <span class="p">(</span><span class="nx">cacheName</span> <span class="o">!==</span> <span class="nx">APP_CACHE_NAME</span> <span class="o">&amp;&amp;</span> <span class="nx">cacheName</span> <span class="o">!==</span> <span class="nx">STATIC_CACHE_NAME</span><span class="p">)</span> <span class="p">{</span>
+                            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'deleting'</span><span class="p">,</span><span class="nx">cacheName</span><span class="p">);</span>
+                            <span class="k">return</span> <span class="nx">caches</span><span class="p">.</span><span class="k">delete</span><span class="p">(</span><span class="nx">cacheName</span><span class="p">);</span>
+                        <span class="p">}</span>
+                    <span class="p">})</span>
+                <span class="p">);</span>
+            <span class="p">})</span>
+        <span class="p">])</span>
+    <span class="p">);</span>
+<span class="p">});</span>
+
+<span class="k">this</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">'fetch'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kd">var</span> <span class="nx">response</span><span class="p">;</span>
+  <span class="nx">event</span><span class="p">.</span><span class="nx">respondWith</span><span class="p">(</span><span class="nx">caches</span><span class="p">.</span><span class="nx">match</span><span class="p">(</span><span class="nx">event</span><span class="p">.</span><span class="nx">request</span><span class="p">)</span>
+    <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">match</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">return</span> <span class="nx">match</span> <span class="o">||</span> <span class="nx">fetch</span><span class="p">(</span><span class="nx">event</span><span class="p">.</span><span class="nx">request</span><span class="p">);</span>
+    <span class="p">}).</span><span class="k">catch</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+      <span class="k">return</span> <span class="nx">fetch</span><span class="p">(</span><span class="nx">event</span><span class="p">.</span><span class="nx">request</span><span class="p">);</span>
+    <span class="p">})</span>
+    <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">r</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">response</span> <span class="o">=</span> <span class="nx">r</span><span class="p">;</span>
+      <span class="nx">caches</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="nx">APP_CACHE_NAME</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">cache</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">cache</span><span class="p">.</span><span class="nx">put</span><span class="p">(</span><span class="nx">event</span><span class="p">.</span><span class="nx">request</span><span class="p">,</span> <span class="nx">response</span><span class="p">);</span>
+      <span class="p">});</span>
+      <span class="k">return</span> <span class="nx">response</span><span class="p">.</span><span class="nx">clone</span><span class="p">();</span>
+    <span class="p">})</span>
+  <span class="p">);</span>
+<span class="p">});</span></code></pre></figure> <p>Essa é uma adaptação minha de um código que achei na internet, novamente desculpem por não dar os créditos. Tentei alguns outros códigos mas esse foi o que funcionou melhor no meu caso, que tenho um blog estático no github pages.</p> <p>Agora que ja temos nosso Service Worker, precisamos registra-lo! Volte no seu &lt;head&gt; e cole o seguinte código:</p> <figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="o">&lt;</span><span class="nx">script</span> <span class="nx">type</span><span class="o">=</span><span class="s2">"text/javascript"</span><span class="o">&gt;</span>
+	<span class="k">if</span> <span class="p">(</span><span class="s2">"serviceWorker"</span> <span class="k">in</span> <span class="nb">navigator</span><span class="p">)</span> <span class="p">{</span>
+		<span class="nb">navigator</span><span class="p">.</span><span class="nx">serviceWorker</span><span class="p">.</span><span class="nx">register</span><span class="p">(</span><span class="s2">"/service-worker.js"</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">registration</span><span class="p">)</span> <span class="p">{</span>
+			<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"Service Worker registration successful with scope: "</span><span class="p">,</span> <span class="nx">registration</span><span class="p">.</span><span class="nx">scope</span><span class="p">);</span>
+		<span class="p">}).</span><span class="k">catch</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
+			<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"Service Worker registration failed: "</span><span class="p">,</span> <span class="nx">err</span><span class="p">);</span>
+		<span class="p">});</span>
+	<span class="p">}</span>
+<span class="o">&lt;</span><span class="sr">/script&gt;</span></code></pre></figure> <p>Com isso o seu site já funcionará como uma PWA!</p> <p>hasta la vista!</p> <div class="entry-meta"> <br> <hr> <span class="entry-tags"><a href="http://localhost:4000/tags/#PWA" title="Pages tagged PWA" class="tag"><span class="term">PWA</span></a><a href="http://localhost:4000/tags/#mobile" title="Pages tagged mobile" class="tag"><span class="term">mobile</span></a><a href="http://localhost:4000/tags/#javascript" title="Pages tagged javascript" class="tag"><span class="term">javascript</span></a><a href="http://localhost:4000/tags/#github" title="Pages tagged github" class="tag"><span class="term">github</span></a><a href="http://localhost:4000/tags/#github-pages" title="Pages tagged github-pages" class="tag"><span class="term">github-pages</span></a><a href="http://localhost:4000/tags/#jekyll" title="Pages tagged jekyll" class="tag"><span class="term">jekyll</span></a><a href="http://localhost:4000/tags/#google" title="Pages tagged google" class="tag"><span class="term">google</span></a><a href="http://localhost:4000/tags/#web" title="Pages tagged web" class="tag"><span class="term">web</span></a><a href="http://localhost:4000/tags/#cache" title="Pages tagged cache" class="tag"><span class="term">cache</span></a></span> <span class="social-share"> <a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/como-transformar-um-site-no-github-pages-feito-com-jekyll-em-uma-pwa/" title="Share on Facebook" class="tag"> <span class="term"><i class="fa fa-facebook-square"></i> Share</span> </a> <a href="https://twitter.com/intent/tweet?text=http://localhost:4000/como-transformar-um-site-no-github-pages-feito-com-jekyll-em-uma-pwa/" title="Share on Twitter" class="tag"> <span class="term"><i class="fa fa-twitter-square"></i> Tweet</span> </a> <a href="https://plus.google.com/share?url=http://localhost:4000/como-transformar-um-site-no-github-pages-feito-com-jekyll-em-uma-pwa/" title="Share on Google+" class="tag"> <span class="term"><i class="fa fa-google-plus-square"></i> +1</span> </a> </span> <div style="clear:both"></div> </div> </div> </div> <section id="disqus_thread" class="animated fadeInUp"></section><!-- /#disqus_thread --> </header> <!-- JS --> <script src="http://localhost:4000/assets/js/jquery-1.12.0.min.js"></script> <script src="http://localhost:4000/assets/js/jquery.dlmenu.min.js"></script> <script src="http://localhost:4000/assets/js/jquery.goup.min.js"></script> <script src="http://localhost:4000/assets/js/jquery.magnific-popup.min.js"></script> <script src="http://localhost:4000/assets/js/jquery.fitvid.min.js"></script> <script src="http://localhost:4000/assets/js/scripts.js"></script> <script type="text/javascript"> var disqus_shortname = 'feliperegino'; (function() { var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true; dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js'; (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq); })(); (function () { var s = document.createElement('script'); s.async = true; s.type = 'text/javascript'; s.src = '//' + disqus_shortname + '.disqus.com/count.js'; (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s); }()); </script> <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript> <!-- MathJax --> <script async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> </body> </html>
