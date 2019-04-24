@@ -64,7 +64,6 @@ plugins:
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-gist
-  - jekyll-pwa-plugin
 
 jekyll-mentions:
     base_url: https://github.com

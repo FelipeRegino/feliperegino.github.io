@@ -26,4 +26,8 @@
 <url>
 <loc>http://localhost:4000/posts/</loc>
 </url>
+<url>
+<loc>http://localhost:4000/offline.html</loc>
+<lastmod>2019-04-24T00:09:28-03:00</lastmod>
+</url>
 </urlset>

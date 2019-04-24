@@ -1,37 +1,80 @@
-                        importScripts("/assets/js/workbox-v3.6.3/workbox-sw.js");
-            workbox.setConfig({modulePathPrefix: "/assets/js/workbox-v3.6.3"});
+const VERSION = "1.0.0";
 
-            self.__precacheManifest = [{"url":"/index.html","revision":"bd2322797615e4529de55b3ea0258e9a"},{"url":"/resolvendo-problema-do-jQuery-InputMask-no-Mobile/","revision":"6976d4a75afea85dbe8e65264ede8340"},{"url":"/motivacao-do-blog/","revision":"c4cec7c5a331fb69e6f780c96dcd90d8"}];
-            // set names for both precache & runtime cache
-workbox.core.setCacheNameDetails({
-    prefix: 'my-blog',
-    suffix: 'v1',
-    precache: 'precache',
-    runtime: 'runtime-cache'
+const APP_CACHE_NAME = 'felipe-regino-app';
+const STATIC_CACHE_NAME = 'felipe-regino-static';
+
+
+const CACHE_STATIC = [
+    '/assets/css/main.css',
+    '/assets/img/icons/icon-72x72.png',
+    '/assets/img/icons/icon-96x96.png',
+    '/assets/img/icons/icon-128x128.png',
+    '/assets/img/icons/icon-144x144.png',
+    '/assets/img/icons/icon-152x152.png',
+    '/assets/img/icons/icon-192x192.png',
+    '/assets/img/icons/icon-384x384.png',
+    '/assets/img/icons/icon-512x512.png',
+    '/assets/img/logo.jpg',
+ ];
+
+ const CACHE_APP = [
+    '/',
+    '/404',
+    '/about/',
+    '/tags/',
+    '/posts/',
+    '/resolvendo-problema-do-jQuery-InputMask-no-Mobile/',
+    '/motivacao-do-blog/',
+ ];
+
+self.addEventListener('install',function(e){
+    e.waitUntil(
+        Promise.all([
+            caches.open(STATIC_CACHE_NAME),
+            caches.open(APP_CACHE_NAME),
+            self.skipWaiting()
+          ]).then(function(storage){
+            var static_cache = storage[0];
+            var app_cache = storage[1];
+            return Promise.all([
+              static_cache.addAll(CACHE_STATIC),
+              app_cache.addAll(CACHE_APP)]);
+        })
+    );
 });
 
-// let Service Worker take control of pages ASAP
-workbox.skipWaiting();
-workbox.clientsClaim();
+self.addEventListener('activate', function(e) {
+    e.waitUntil(
+        Promise.all([
+            self.clients.claim(),
+            caches.keys().then(function(cacheNames) {
+                return Promise.all(
+                    cacheNames.map(function(cacheName) {
+                        if (cacheName !== APP_CACHE_NAME && cacheName !== STATIC_CACHE_NAME) {
+                            console.log('deleting',cacheName);
+                            return caches.delete(cacheName);
+                        }
+                    })
+                );
+            })
+        ])
+    );
+});
 
-// let Workbox handle our precache list
-workbox.precaching.precacheAndRoute(self.__precacheManifest);
-
-// use `networkFirst` strategy for `*.html`, like all my posts
-workbox.routing.registerRoute(
-    /\.html$/,
-    workbox.strategies.networkFirst()
-);
-
-// use `cacheFirst` strategy for images
-workbox.routing.registerRoute(
-    /assets\/(img|icons)/,
-    workbox.strategies.cacheFirst()
-);
-
-// third party files
-workbox.routing.registerRoute(
-    /^https?:\/\/cdn.staticfile.org/,
-    workbox.strategies.staleWhileRevalidate()
-);
-
+this.addEventListener('fetch', function(event) {
+  var response;
+  event.respondWith(caches.match(event.request)
+    .then(function (match) {
+      return match || fetch(event.request);
+    }).catch(function() {
+      return fetch(event.request);
+    })
+    .then(function(r) {
+      response = r;
+      caches.open(APP_CACHE_NAME).then(function(cache) {
+        cache.put(event.request, response);
+      });
+      return response.clone();
+    })
+  );
+});
