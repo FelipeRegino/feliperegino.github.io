@@ -8,7 +8,7 @@ logo:               '/assets/img/logo.jpg'
 background:         ''
 tiled_bg:           false   # Set this true if you want to tile your background image, otherwise it will be covered
 locale:             pt_BR
-url:                https://feliperegino.github.io
+url:                https://regino.dev
 base-url:           '/'
 
 # Jekyll
@@ -33,7 +33,7 @@ disqus_shortname:   feliperegino
 # if you don't have any of social below, comment the line.
 
 #bing-verify:
-email:              liperegino@gmail.com
+email:              felipe@regino.dev
 twitter:            FelipeRegino
 # facebook:           username
 github-url:         FelipeRegino
