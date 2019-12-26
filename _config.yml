@@ -4,7 +4,7 @@ bio:                'Full Stack Developer - Salvador, Brasil.'
 description:        'Full Stack Developer - Salvador, Brasil.'
 reading_time:       true
 words_per_minute:   200
-logo:               '/assets/img/logo.jpg'
+logo:               'https://pt.gravatar.com/avatar/79ba39e645eec153320bd1fe0a076daf?s=800'
 background:         ''
 tiled_bg:           false   # Set this true if you want to tile your background image, otherwise it will be covered
 locale:             pt_BR
